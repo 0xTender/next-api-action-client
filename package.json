@@ -1,0 +1,20 @@
+{
+  "name": "@0xtender/next-api-action-client",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "next": ">=13",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "zod": "^3.24.1"
+  },
+  "peerDependencies": {
+    "next": ">=13",
+    "zod": "^3.24.1"
+  }
+}
