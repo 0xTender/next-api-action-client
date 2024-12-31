@@ -4,6 +4,10 @@ Inspired by [next-safe-action]("https://next-safe-action.dev/")
 
 View [playground.ts]("./playground.ts")
 
+```
+npm i @0xtender/next-api-action-client
+```
+
 ```ts
 export const GET = (req: NextRequest) =>
   client({ req })
@@ -12,7 +16,7 @@ export const GET = (req: NextRequest) =>
       z.object({
         page: z.coerce.number().default(0),
         pageSize: z.coerce.number().default(25),
-      }),
+      })
     )
     .action(({ ctx, parsedQuery }) => {
       console.log(ctx.user, parsedQuery);
@@ -25,11 +29,10 @@ export const POST = (req: NextRequest) =>
     .json(
       z.object({
         title: z.string(),
-      }),
+      })
     )
     .action(({ ctx, parsedQuery, parsedInput }) => {
       console.log(ctx, parsedQuery, parsedInput);
       return NextResponse.json({ success: true });
     });
 ```
-
